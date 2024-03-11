@@ -4,7 +4,7 @@ import {useAuthStatus} from "../hooks/useAuthStatus";
 export default function PrivateRoute() {
     const {loggedIn, checkindStatus} = useAuthStatus();
     if(checkindStatus){
-        return <h3>Loading...</h3>;
+        return <h3 className="text-black">Loading...</h3>;
     }
   return loggedIn ? <Outlet /> : <Navigate to="/profile" />
 }
